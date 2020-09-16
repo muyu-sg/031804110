@@ -7,7 +7,7 @@ import numpy as np
 from MyException import emptyText_error,noChinese_error
 def get_keywords(context1,context2):
     # 去除停用词
-    stopwords = [line.strip() for line in open('stopWords.txt',encoding='UTF-8').readlines()]
+    stopwords = [line.strip() for line in open('StopWords.txt',encoding='UTF-8').readlines()]
     stopwords.append("\n")
     # 分词
     keywords1 =[i for i in jieba.cut(context1, cut_all=True) if i != '' and i!=' ']
